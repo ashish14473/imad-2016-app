@@ -1,16 +1,11 @@
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
-
 var exp = require("express");
 var app = exp();
 
 app.set('view engine', 'ejs');
 
-var handlers = require('./routes/routes.js');
 
-app.get('/', handlers.homeFn);
 
+app.get('/','routes.js');
 
 
 app.get('/:city', handlers.cityFn);
